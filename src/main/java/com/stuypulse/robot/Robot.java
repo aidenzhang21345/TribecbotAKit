@@ -8,6 +8,9 @@
 package com.stuypulse.robot;
 
 import com.stuypulse.robot.constants.Settings;
+
+import edu.wpi.first.wpilibj.DriverStation.Alliance;
+
 import org.littletonrobotics.junction.LogFileUtil;
 import org.littletonrobotics.junction.LoggedRobot;
 import org.littletonrobotics.junction.Logger;
@@ -22,6 +25,12 @@ import org.littletonrobotics.junction.wpilog.WPILOGWriter;
  * project.
  */
 public class Robot extends LoggedRobot {
+
+  private static Alliance alliance;
+
+  public static boolean isBlue() {
+        return alliance == Alliance.Blue;
+    }
   public Robot() {
     // Record metadata
     // Logger.recordMetadata("ProjectName", BuildConstants.MAVEN_NAME);

@@ -1,5 +1,30 @@
+/** ********************** PROJECT TRIBECBOT ************************ */
+/* Copyright (c) 2026 StuyPulse Robotics. All rights reserved. */
+ /* Use of this source code is governed by an MIT-style license */
+ /* that can be found in the repository LICENSE file.           */
+/** ************************************************************ */
+package com.stuypulse.robot.constants;
 
+import java.util.ArrayList;
+import java.util.List;
 
+import com.stuypulse.robot.Robot;
+import com.stuypulse.robot.subsystems.swerve.CommandSwerveDrivetrain;
+import edu.wpi.first.apriltag.AprilTag;
+
+import edu.wpi.first.math.geometry.Pose2d;
+import edu.wpi.first.math.geometry.Pose3d;
+import edu.wpi.first.math.geometry.Rotation2d;
+import edu.wpi.first.math.geometry.Rotation3d;
+import edu.wpi.first.math.geometry.Translation2d;
+import edu.wpi.first.math.geometry.Translation3d;
+import edu.wpi.first.math.util.Units;
+import edu.wpi.first.wpilibj.smartdashboard.Field2d;
+import edu.wpi.first.wpilibj.smartdashboard.FieldObject2d;
+
+/**
+ * This interface stores information about the field elements.
+ */
 public interface Field {
 
     public static final Field2d FIELD2D = new Field2d();
@@ -17,8 +42,6 @@ public interface Field {
     public static final double HUB_RADIUS = Units.inchesToMeters(41.7 / 2.0);
 
     public static final double OPPONENT_ZONE_X = LENGTH - Units.inchesToMeters(158.6);
-
-    public static final double OPPONENT_HUB_DS_X = LENGTH - HUB_FAR_LEFT_CORNER.getX() + 2.0 * HUB_RADIUS;
 
     public static final double BEHIND_HUB_TOLERANCE_X = Units.inchesToMeters(144); // To extend the triangle vertex
     public static final double BEHIND_HUB_TOLERANCE_Y = Units.inchesToMeters(12) + Units.inchesToMeters(2); // To extend base of triangle (colinear with back hub)
