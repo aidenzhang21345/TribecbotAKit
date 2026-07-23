@@ -10,7 +10,7 @@ import java.util.List;
 
 import com.stuypulse.robot.Robot;
 import com.stuypulse.robot.subsystems.swerve.CommandSwerveDrivetrain;
-import edu.wpi.first.apriltag.AprilTag;
+import com.stuypulse.robot.util.vision.AprilTag;
 
 import edu.wpi.first.math.geometry.Pose2d;
 import edu.wpi.first.math.geometry.Pose3d;
